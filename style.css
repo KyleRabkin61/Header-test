@@ -123,7 +123,7 @@ Fonts:
   
   /* header css */
   
-  /* .img-header {
+  .image-header {
     display: grid;
     place-items: center;
     position: relative;
@@ -133,12 +133,12 @@ Fonts:
     animation: fade-out linear forwards;
     animation-timeline: view();
     animation-range: 120vh;
-  } */
+  }
   
   .the-image {
-    /* grid-column: 1 / -1;
+    grid-column: 1 / -1;
     position: absolute;
-    inset: 0; */
+    inset: 0;
     width: 100%;
     height: 100%;
     opacity: 1;
