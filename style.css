@@ -123,7 +123,7 @@ Fonts:
   
   /* header css */
   
-  .image-header {
+  .the-header {
     display: grid;
     place-items: center;
     position: relative;
@@ -189,7 +189,7 @@ Fonts:
   }
 
   @media screen and (max-height:600px) {
-    .image-header {
+    .the-header {
       height: 600px;
       animation: fade-out linear forwards;
       animation-timeline: view();
@@ -201,7 +201,7 @@ Fonts:
   }
   
   @media screen and (max-height:800px) {
-    .image-header {
+    .the-header {
       height: 700px;
       animation: fade-out linear forwards;
       animation-timeline: view();
