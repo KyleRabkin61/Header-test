@@ -128,9 +128,9 @@
   place-items: center;
   position: relative;
   height: 100svh;
-  /* overflow-x: clip;
+  overflow-x: clip;
   padding-block: 7rem;
-  animation: fade-out linear forwards;
+  /* animation: fade-out linear forwards;
   animation-timeline: view();
   animation-range: 120vh; */
 }
