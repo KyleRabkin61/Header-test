@@ -14,200 +14,420 @@ Fonts:
 
 /* navbar css */
 
-/* .navbar {
-    transition: all 0.25s;
-  }
-  
-  .navbar-brand img{
-    height: clamp(70px, 11vw, 90px);
-  }
-  
-  .navbar .container-fluid {
-    padding-right: calc(var(--bs-gutter-x)* .5) !important;
-    padding-left: calc(var(--bs-gutter-x)* .5) !important;
-  
-  }
-  
-  .navbar-scrolled {
-    background-color: #154987;
-    border-bottom: #F4E04D 5px solid;
-  }
-  
-  .nav-link {
-    color: white;
-    font-size: clamp(20px, 2vw, 40px);
-    font-weight: 1000;
-    letter-spacing: 0.2px;
-    margin: 0 20px;
-    font-family: "Josefin Sans", sans-serif;
-  }
-  
-  .nav-link:hover {
-    color: #F4E04D;
-  }
-  
-  .nav-link:focus {
-    color: white !important;
-  }
-  
-  /*hamburger menu css*/
-  
-  .navbar-toggler {
-    width: 50px;
-    height: 30px;
-    position: relative;
-    transition: all .25s;
-  }
-  
-  .navbar-toggler,
-  .navbar-toggler:focus,
-  .navbar-toggler:active,
-  .navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-    border: 0;
-  }
-  
-  .navbar-toggler span {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .toggler-icon {
-    display: block;
-    position: absolute;
-    height: 6px;
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 1px;
-    opacity: 1;
-    left: 0;
-    top: 10px;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
-  
-  .middle-bar {
-    margin-top: 0px;
-  }
-  
-  .navbar-toggler .top-bar {
-    margin-top: 0px;
-    transform: rotate(135deg);
-  }
-  
-  .navbar-toggler .middle-bar {
+.navbar {
+  transition: all 0.25s;
+}
+
+.navbar-brand img {
+  height: clamp(70px, 11vw, 90px);
+}
+
+.navbar .container-fluid {
+  padding-right: calc(var(--bs-gutter-x)* .5) !important;
+  padding-left: calc(var(--bs-gutter-x)* .5) !important;
+
+}
+
+.navbar-scrolled {
+  background-color: #154987;
+  border-bottom: #F4E04D 5px solid;
+}
+
+.nav-link {
+  color: white;
+  font-size: clamp(20px, 2vw, 40px);
+  font-weight: 1000;
+  letter-spacing: 0.2px;
+  margin: 0 20px;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #154987;
+  paint-order: stroke fill;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  opacity: 0;
+  transition: all 0.25s;
+  height: 4px;
+  width: 100%;
+  background: #F4E04D;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover {
+  color: #F4E04D;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+.nav-link:focus {
+  color: white !important;
+}
+
+/*hamburger menu css*/
+
+.navbar-toggler {
+  width: 50px;
+  height: 30px;
+  position: relative;
+  transition: all .25s;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  top: 10px;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0px;
+}
+
+.navbar-toggler .top-bar {
+  margin-top: 0px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0px;
+  transform: rotate(-135deg);
+}
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 20px;
+  transform: rotate(0deg);
+}
+
+/* header css */
+
+.image-header {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100svh;
+  overflow-x: clip;
+  padding-block: 7rem;
+  animation: fade-out linear forwards;
+  animation-timeline: view();
+  animation-range: 120vh;
+}
+
+.the-image {
+  grid-column: 1 / -1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
+@keyframes fade-out {
+  to {
     opacity: 0;
-    filter: alpha(opacity=0);
   }
-  
-  .navbar-toggler .bottom-bar {
-    margin-top: 0px;
-    transform: rotate(-135deg);
-  }
-  
-  .navbar-toggler.collapsed .top-bar {
-    margin-top: -20px;
-    transform: rotate(0deg);
-  }
-  
-  .navbar-toggler.collapsed .middle-bar {
-    opacity: 1;
-    filter: alpha(opacity=100);
-  }
-  
-  .navbar-toggler.collapsed .bottom-bar {
-    margin-top: 20px;
-    transform: rotate(0deg);
-  } */
-  
-  /* header css */
-  
-  .image-header {
-    display: grid;
-    place-items: center;
-    position: relative;
-    height: 100svh;
-    overflow-x: clip;
-    padding-block: 7rem;
-    animation: fade-out linear forwards;
-    animation-timeline: view();
-    animation-range: 120vh;
-  }
-  
-  .the-image {
-    grid-column: 1 / -1;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.5);
-  }
-  
-  @keyframes fade-out {
-    to {
-      opacity: 0;
-    }
-  }
-  
-  .header {
-    background: #154987;
-    width: clamp(350px, 60vw, 575px);
-    height: clamp(200px, 40svh, 600px);
-    border: #F4E04D 5px solid;
-    border-radius: 10px;
-    box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.70);
-  }
-  
-  .header-text {
-    color: white;
-    font-size: clamp(35px, 5vw, 55px);
-    padding: clamp(50px, 3vw, 100px);
-    font-family: "Josefin Sans", sans-serif;
-    margin: auto 0;
-  }
-  
-  .explore {
-    background: #F4E04D;
-    margin-top: 50px;
-    border-radius: 10px;
-    font-size: 30px;
-    padding: 20px 100px;
-    width: 100px;
-    height: clamp(70px, 10svh, 100px);
-    box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.70);
-    font-family: "Instrument Sans", sans-serif;
-    color: black;
-  }
-  
-  .explore:hover {
-    background: #F4E04D !important;
-    box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
+}
+
+.header {
+  background: #154987;
+  width: clamp(350px, 60vw, 575px);
+  height: clamp(200px, 40svh, 600px);
+  border: #F4E04D 5px solid;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.70);
+}
+
+.header-text {
+  color: white;
+  font-size: clamp(30px, 5.5vw, 55px);
+  padding: clamp(50px, 3vw, 100px);
+  font-family: "Josefin Sans", sans-serif;
+  margin: auto 0;
+}
+
+.explore {
+  background: #F4E04D;
+  margin-top: 50px;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 20px 100px;
+  width: 100px;
+  height: clamp(70px, 10svh, 100px);
+  box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.70);
+  font-family: "Instrument Sans", sans-serif;
+  color: black;
+}
+
+.explore:hover {
+  background: #F4E04D !important;
+  box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.row {
+  width: 100%;
+}
+
+/* the project css */
+
+.the-project {
+  background: #F5F5F5;
+  height: 1200px;
+}
+
+.the-project-title {
+  font-size: 50px;
+  font-weight: 500;
+  color: #154987;
+  position: relative;
+  top: 75px;
+  margin-bottom: 50px;
+}
+
+.the-project-title::after {
+  position: absolute;
+  content: ' ';
+  width: clamp(75px, 6vw, 150px);
+  height: 4px;
+  left: 50%;
+  top: 75px;
+  bottom: -10px;
+  background-image: linear-gradient(to right, #2076DB, #154987);
+  transform: translate(-50%);
+}
+
+.the-project-image {
+  width: 80%;
+  height: 400px;
+  background-image: url(Athletic-Stadium-Images/before.JPG);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
+  position: relative;
+}
+
+.the-project-info {
+  width: 80%;
+  height: 400px;
+  background: #154987;
+  border: #F4E04D 5px solid;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
+  position: relative;
+}
+
+/* the funding css */
+
+.the-funding {
+  background: #113F75;
+  height: 1200px;
+}
+
+.the-funding-title {
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  top: 75px;
+  margin-bottom: 50px;
+}
+
+.the-funding-title::after {
+  position: absolute;
+  content: ' ';
+  width: clamp(75px, 6vw, 150px);
+  height: 4px;
+  left: 50%;
+  top: 75px;
+  bottom: -10px;
+  background-image: linear-gradient(to right, #FFF39A, #F4E04D);
+  transform: translate(-50%);
+}
+
+.the-funding-image {
+  width: 80%;
+  height: 400px;
+  background-image: url(Athletic-Stadium-Images/before.JPG);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
+  position: relative;
+}
+
+.the-funding-info {
+  width: 80%;
+  height: 400px;
+  background: white;
+  border: #F4E04D 5px solid;
+  border-radius: 10px;
+  color: black;
+  box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
+  position: relative;
+}
+
+@media screen and (min-width:1200px) {
+  .the-project {
+    height: 900px;
   }
 
-  @media screen and (max-height:600px) {
-    .img-header {
-      height: 600px;
-      animation: fade-out linear forwards;
-      animation-timeline: view();
-      animation-range: 500px;
-    }
-    .header-text {
-      font-size: clamp(30px, 5vh, 40px);
-    }
+  .the-project-title {
+    position: relative;
+    top: 0;
+    margin-bottom: 0;
   }
-  
-  @media screen and (max-height:800px) {
-    .img-header {
-      height: 700px;
-      animation: fade-out linear forwards;
-      animation-timeline: view();
-      animation-range: 900px;
-    }
-    .header-text {
-      font-size: clamp(25px, 4.7vh, 35px);
-    }
+
+  .the-project-image {
+    width: 35vw;
+    bottom: 100px;
   }
+
+  .the-project-info {
+    width: 35vw;
+    bottom: 100px;
+  }
+
+  .the-funding {
+    height: 900px;
+  }
+
+  .the-funding-title {
+    position: relative;
+    top: 0;
+    margin-bottom: 0;
+  }
+
+  .the-funding-image {
+    width: 35vw;
+    bottom: 100px;
+  }
+
+  .the-funding-info {
+    width: 35vw;
+    bottom: 100px;
+  }
+}
+
+
+@media screen and (max-height:600px) {
+  .img-header {
+    height: 600px;
+    animation: fade-out linear forwards;
+    animation-timeline: view();
+    animation-range: 500px;
+  }
+
+  .header-text {
+    font-size: clamp(30px, 5vh, 40px);
+  }
+}
+
+@media screen and (max-height:800px) {
+  .img-header {
+    height: 700px;
+    animation: fade-out linear forwards;
+    animation-timeline: view();
+    animation-range: 900px;
+  }
+
+  .header-text {
+    font-size: clamp(25px, 4.7vh, 35px);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateY(100px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+  .image-header {
+    animation: none;
+  }
+
+  .hidden {
+    transition: none;
+  }
+}
+
+/* scrollbar */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #dddcdc;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #F4E04D;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a7982b;
+}
