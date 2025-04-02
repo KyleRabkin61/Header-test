@@ -1,64 +1,64 @@
 /*
-
-Colors: 
-
-  Blue: #154987
-  Yellow: #F4E04D
-
-Fonts:
-
-  font-family: "Josefin Sans", sans-serif;
-  font-family: "Instrument Sans", sans-serif;
-
-*/
-
-/* navbar css */
-
-.navbar {
-    transition: all 0.25s;
-  }
-  
-  .navbar-brand img{
-    height: clamp(70px, 11vw, 90px);
-  }
-  
-  .navbar .container-fluid {
-    padding-right: calc(var(--bs-gutter-x)* .5) !important;
-    padding-left: calc(var(--bs-gutter-x)* .5) !important;
-  
-  }
-  
-  .navbar-scrolled {
-    background-color: #154987;
-    border-bottom: #F4E04D 5px solid;
-  }
-  
-  .nav-link {
-    color: white;
-    font-size: clamp(20px, 2vw, 40px);
-    font-weight: 1000;
-    letter-spacing: 0.2px;
-    margin: 0 20px;
-    font-family: "Josefin Sans", sans-serif;
-  }
-  
-  .nav-link:hover {
-    color: #F4E04D;
-  }
-  
-  .nav-link:focus {
-    color: white !important;
-  }
-  
-  /*hamburger menu css*/
-  
-  .navbar-toggler {
+ 
+ Colors: 
+ 
+   Blue: #154987
+   Yellow: #F4E04D
+ 
+ Fonts:
+ 
+   font-family: "Josefin Sans", sans-serif;
+   font-family: "Instrument Sans", sans-serif;
+ 
+ */
+ 
+ /* navbar css */
+ 
+ /* .navbar {
+     transition: all 0.25s;
+   }
+   
+   .navbar-brand img{
+     height: clamp(70px, 11vw, 90px);
+   }
+   
+   .navbar .container-fluid {
+     padding-right: calc(var(--bs-gutter-x)* .5) !important;
+     padding-left: calc(var(--bs-gutter-x)* .5) !important;
+   
+   }
+   
+   .navbar-scrolled {
+     background-color: #154987;
+     border-bottom: #F4E04D 5px solid;
+   }
+   
+   .nav-link {
+     color: white;
+     font-size: clamp(20px, 2vw, 40px);
+     font-weight: 1000;
+     letter-spacing: 0.2px;
+     margin: 0 20px;
+     font-family: "Josefin Sans", sans-serif;
+   }
+   
+   .nav-link:hover {
+     color: #F4E04D;
+   }
+   
+   .nav-link:focus {
+     color: white !important;
+   }
+   
+   /*hamburger menu css*/
+ 
+   .navbar-toggler {
     width: 50px;
     height: 30px;
     position: relative;
     transition: all .25s;
   }
-  
+
   .navbar-toggler,
   .navbar-toggler:focus,
   .navbar-toggler:active,
@@ -67,12 +67,12 @@ Fonts:
     box-shadow: none;
     border: 0;
   }
-  
+
   .navbar-toggler span {
     margin: 0;
     padding: 0;
   }
-  
+
   .toggler-icon {
     display: block;
     position: absolute;
@@ -86,44 +86,44 @@ Fonts:
     transform: rotate(0deg);
     transition: .25s ease-in-out;
   }
-  
+
   .middle-bar {
     margin-top: 0px;
   }
-  
+
   .navbar-toggler .top-bar {
     margin-top: 0px;
     transform: rotate(135deg);
   }
-  
+
   .navbar-toggler .middle-bar {
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  
+
   .navbar-toggler .bottom-bar {
     margin-top: 0px;
     transform: rotate(-135deg);
   }
-  
+
   .navbar-toggler.collapsed .top-bar {
     margin-top: -20px;
     transform: rotate(0deg);
   }
-  
+
   .navbar-toggler.collapsed .middle-bar {
     opacity: 1;
     filter: alpha(opacity=100);
   }
-  
+
   .navbar-toggler.collapsed .bottom-bar {
     margin-top: 20px;
     transform: rotate(0deg);
-  } */
-  
+  }
+
   /* header css */
-  
-  .the-header {
+
+  .image-header {
     display: grid;
     place-items: center;
     position: relative;
@@ -134,7 +134,7 @@ Fonts:
     animation-timeline: view();
     animation-range: 120vh;
   }
-  
+
   .the-image {
     grid-column: 1 / -1;
     position: absolute;
@@ -146,13 +146,13 @@ Fonts:
     z-index: -1;
     filter: brightness(0.5);
   }
-  
+
   @keyframes fade-out {
     to {
       opacity: 0;
     }
   }
-  
+
   .header {
     background: #154987;
     width: clamp(350px, 60vw, 575px);
@@ -161,7 +161,7 @@ Fonts:
     border-radius: 10px;
     box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.70);
   }
-  
+
   .header-text {
     color: white;
     font-size: clamp(35px, 5vw, 55px);
@@ -169,7 +169,7 @@ Fonts:
     font-family: "Josefin Sans", sans-serif;
     margin: auto 0;
   }
-  
+
   .explore {
     background: #F4E04D;
     margin-top: 50px;
@@ -182,14 +182,14 @@ Fonts:
     font-family: "Instrument Sans", sans-serif;
     color: black;
   }
-  
+
   .explore:hover {
     background: #F4E04D !important;
     box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
   }
 
   @media screen and (max-height:600px) {
-    .the-header {
+    .img-header {
       height: 600px;
       animation: fade-out linear forwards;
       animation-timeline: view();
@@ -199,9 +199,9 @@ Fonts:
       font-size: clamp(30px, 5vh, 40px);
     }
   }
-  
+
   @media screen and (max-height:800px) {
-    .the-header {
+    .image-header {
       height: 700px;
       animation: fade-out linear forwards;
       animation-timeline: view();
