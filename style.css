@@ -189,7 +189,7 @@
   }
 
   @media screen and (max-height:600px) {
-    .img-header {
+    .image-header {
       height: 600px;
       animation: fade-out linear forwards;
       animation-timeline: view();
