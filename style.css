@@ -138,6 +138,7 @@
 .the-image {
   grid-column: 1 / -1;
   position: absolute;
+  overflow-x: clip;
   inset: 0;
   width: 100%;
   height: 100%;
